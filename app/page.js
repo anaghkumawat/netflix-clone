@@ -2,7 +2,7 @@
 
 import Navbar from "@/components/Navbar";
 import { useEffect } from "react";
-import { API_OPTIONS } from ".env";
+import { API_OPTIONS } from "@/lib/constants";
 
 export default function Home() {
   const getNowPlayingMovies = async () => {
