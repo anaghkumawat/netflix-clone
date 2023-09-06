@@ -3,6 +3,7 @@
 import Navbar from "@/components/Navbar";
 import { useEffect } from "react";
 import { API_OPTIONS } from "@/lib/constants";
+import Billboard from "@/components/Billboard";
 
 export default function Home() {
   const getNowPlayingMovies = async () => {
@@ -21,6 +22,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
+      <Billboard />
     </>
   );
 }
