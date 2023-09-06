@@ -4,6 +4,8 @@ import Navbar from "@/components/Navbar";
 import { useEffect } from "react";
 import { API_OPTIONS } from "@/lib/constants";
 import Billboard from "@/components/Billboard";
+import { Provider } from "react-redux";
+import appStore from "@/utils/appStore";
 
 export default function Home() {
   const getNowPlayingMovies = async () => {
@@ -20,9 +22,11 @@ export default function Home() {
   }, []);
 
   return (
-    <>
-      <Navbar />
-      <Billboard />
-    </>
+    <Provider store={appStore}>
+      <>
+        <Navbar />
+        <Billboard />
+      </>
+    </Provider>
   );
 }
