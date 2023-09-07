@@ -7,13 +7,14 @@ const BillboardVideo = ({ movieId }) => {
 
   useMovieTrailer(movieId);
   return (
-    <div>
+    <div className="w-full">
       <iframe
-        className="w-full h-[56.25vw] object-cover brightness-[60%]"
+        className="w-full brightness-[60%] object-cover h-[56.25vw]"
+        //className="w-full h-[56.25vw]"
         src={
           "https://www.youtube.com/embed/" +
           trailerVideo?.key +
-          "?&autoplay=1&mute=1"
+          "?&autoplay=1&mute=1&rel=0"
         }
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       ></iframe>

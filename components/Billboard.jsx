@@ -13,7 +13,9 @@ const Billboard = () => {
   const { original_title, overview, id } = mainMovie;
 
   return (
-    <div className="relative h-[56.25vw]">
+    <div
+    //className="relative h-[56.25vw]"
+    >
       <BillboardVideo movieId={id} />
       <BillboardInfo title={original_title} overview={overview} />
     </div>
