@@ -1,15 +1,13 @@
 import React, { useEffect } from "react";
 
-import { Info } from "lucide-react";
 import { useSelector } from "react-redux";
-import useMovieTrailer from "@/hooks/useMovieTrailer";
 import BillboardInfo from "./BillboardInfo";
 import BillboardVideo from "./BillboardVideo";
 
 const Billboard = () => {
   const movies = useSelector((store) => store.movies?.nowPlayingMovies);
   if (!movies) return;
-  const mainMovie = movies[0];
+  const mainMovie = movies[18];
   console.log(mainMovie);
 
   const { original_title, overview, id } = mainMovie;
