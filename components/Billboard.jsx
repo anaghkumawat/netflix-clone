@@ -7,8 +7,7 @@ import BillboardVideo from "./BillboardVideo";
 const Billboard = () => {
   const movies = useSelector((store) => store.movies?.nowPlayingMovies);
   if (!movies) return;
-  const mainMovie = movies[18];
-  console.log(mainMovie);
+  const mainMovie = movies[0];
 
   const { original_title, overview, id } = mainMovie;
 

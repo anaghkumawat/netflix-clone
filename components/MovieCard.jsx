@@ -2,6 +2,7 @@ import { IMG_CDN } from "@/redux/constants";
 import React from "react";
 
 const MovieCard = ({ thumbnail }) => {
+  if (!thumbnail) return null;
   return (
     <div className="group bg-zinc-900 col-span relative h-[12vw]">
       <img

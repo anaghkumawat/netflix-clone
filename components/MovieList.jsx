@@ -10,7 +10,7 @@ const MovieList = ({ title, movies }) => {
           {title}
         </p>
         <div className="grid grid-cols gap-2 grid-flow-col">
-          {movies.map((movie) => (
+          {movies?.map((movie) => (
             <MovieCard key={movie.id} thumbnail={movie.poster_path} />
           ))}
         </div>

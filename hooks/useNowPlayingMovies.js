@@ -1,7 +1,7 @@
-const { API_OPTIONS } = require("@/redux/constants");
-const { addNowPlayingMovies } = require("@/redux/moviesSlice");
 const { useEffect } = require("react");
+const { API_OPTIONS } = require("@/redux/constants");
 const { useDispatch } = require("react-redux");
+const { addNowPlayingMovies } = require("@/redux/moviesSlice");
 
 const useNowPlayingMovies = () => {
   const dispatch = useDispatch();
@@ -12,7 +12,6 @@ const useNowPlayingMovies = () => {
       API_OPTIONS
     );
     const json = await data.json();
-    console.log(json.results);
     dispatch(addNowPlayingMovies(json.results));
   };
 
