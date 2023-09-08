@@ -9,7 +9,7 @@ const MovieList = ({ title, movies }) => {
         <p className="text-white text-md md:text-xl lg:text-2xl font-semibold mb-4">
           {title}
         </p>
-        <div className="grid grid-cols gap-2 grid-flow-col">
+        <div className="grid grid-cols gap-2 grid-flow-col overflow-x-scroll scroll-smooth no-scrollbar">
           {movies?.map((movie) => (
             <MovieCard key={movie.id} thumbnail={movie.poster_path} />
           ))}
