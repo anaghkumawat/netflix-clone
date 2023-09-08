@@ -5,11 +5,11 @@ const MovieList = ({ title, movies }) => {
   console.log(movies);
   return (
     <div className="px-4 md:px-12 mt-4 space-y-8">
-      <div>
+      <div className="overflow-x-scroll scroll-smooth no-scrollbar">
         <p className="text-white text-md md:text-xl lg:text-2xl font-semibold mb-4">
           {title}
         </p>
-        <div className="grid grid-cols gap-2 grid-flow-col overflow-x-scroll scroll-smooth no-scrollbar">
+        <div className="grid grid-cols gap-2 grid-flow-col">
           {movies?.map((movie) => (
             <MovieCard key={movie.id} thumbnail={movie.poster_path} />
           ))}
